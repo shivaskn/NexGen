@@ -18,14 +18,17 @@ connection();
 app.use(cors());
 app.use(express.json());
 
-
 // app.get("/debug-sentry", function mainHandler(req, res) {
 //     throw new Error("My first Sentry error!");
 //   });
+
+app.get("/", (req, res) => {
+  res.send("API IS WORKING");
+});
 
 // Running Port
 app.listen(PORT, () => {
   console.log("Server is running on:", PORT);
 });
 
-app.post('/webhooks',clerkWebhooks)
+app.post("/webhooks", clerkWebhooks);
