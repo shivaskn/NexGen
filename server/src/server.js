@@ -31,7 +31,6 @@ app.use("/api/company/", companyRoutes);
 app.use("/api/jobs", jobRouter);
 app.use("/api/users", userRoutes);
 
-
 // app.get("/debug-sentry", function mainHandler(req, res) {
 //     throw new Error("My first Sentry error!");
 //   });
